@@ -1,0 +1,56 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html  ng-app="resultApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+ 
+     <script src="./scripts/angular-1.4.7/angular.min.js"></script>
+<script src="./scripts/angular-1.4.7/angular-route.js"></script>
+<script src="scripts/hello.js"></script>
+</head>
+<body ng-controller="resultcontroller">
+<div> 
+<div class="section">
+    <h3>result</h3>
+	<ul ng-repeat="task in result">
+    <li>{{task.m_ledgerId}}</li>
+    </ul>
+
+			<table st-table="result" class="table table-striped" style="border:1px bold;">
+				<thead>
+					<tr>
+						<th>Ledger Id</th>
+						<th>APP_REGI_DATE</th>
+						<th>APP_UPD_DATE</th>
+						<th>CREATED_BY</th>
+						<th>CREATION_DATE</th>
+						<th>DESCRIPTION</th>
+						<th>SHORT_NAME</th>
+						<th>STATUS</th>
+						<th>UPDATED_BY</th>
+						<th>UPDATE_DATE</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="task in result">
+						<td>{{task.m_ledgerId}}</td>
+						<td>{{task.m_appUpdDate}}</td>
+						<td>{{task.m_creationDate}}</td>
+						<td>{{task.m_creatioDate}}</td>
+						<td>{{task.m_description}}</td>
+						<td>{{task.m_shortName}}</td>
+						<td>{{task.m_status}}</td>
+						<td>{{task.m_updatedBy}}</td>
+						<td>{{task.m_updatedDate}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<input type="button" ng-click="hello()" value="submit"/>
+    </div>
+</div>
+</div>
+</body>
+
+</html>
