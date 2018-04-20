@@ -30,6 +30,6 @@ public class HomeController {
     	StringBuffer sb = new StringBuffer();
     	List<NcmLedger> li = ncmLedgerService.getAllLedger();
     	 //return new ModelAndView("/views/queryResult.html", "result", li);
-    	return li; 
+    	return li;
     }
 }
